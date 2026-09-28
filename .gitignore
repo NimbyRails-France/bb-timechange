@@ -1,0 +1,9 @@
+.gradle/
+.kotlin/
+build/
+.idea/
+*.log
+.ci/
+dist/
+.release-plan.json
+__pycache__/

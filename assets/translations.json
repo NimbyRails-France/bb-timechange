@@ -1,0 +1,31 @@
+{
+  "fallback": "fr",
+  "languages": {
+    "fr": {
+      "mod.name": "Time Change — Horloge",
+      "mod.description": "Modifier la date et l'heure de la partie avec intervention sur les trains, après confirmation.",
+      "title": "Time Change — Date et heure",
+      "intro": "Horloge lue : {date}. Saisie en UTC ; l'affichage du jeu peut utiliser un autre fuseau. Fermez cette fenêtre avec sa croix.",
+      "year": "Année", "month": "Mois", "day": "Jour", "hour": "Heure UTC", "minute": "Minute", "second": "Seconde",
+      "preview": "Changer l'heure avec intervention sur les trains…", "refresh": "Relire l'horloge",
+      "apply": "Confirmer", "cancel": "Annuler",
+      "confirm": "Passer au {date} et intervenir sur les trains ? Cela peut les déplacer vers leur prochaine destination et débiter le coût des interventions. Les journées intermédiaires ne seront pas simulées.",
+      "success": "Date et heure modifiées : {date}. Interventions : {count}.",
+      "invalid": "Date invalide ou lecture indisponible. Relisez l'horloge et vérifiez les valeurs, notamment le jour du mois.",
+      "uncertain": "Le changement n'a pas été confirmé. Il peut avoir commencé : relisez l'horloge et consultez le journal avant toute nouvelle tentative. Aucune commande ne sera répétée automatiquement."
+    },
+    "en": {
+      "mod.name": "Time Change — Clock",
+      "mod.description": "Change the game's date and time with train interventions, after confirmation.",
+      "title": "Time Change — Date and time",
+      "intro": "Observed clock: {date}. Enter UTC; the game may display a different time zone. Use the window's close button to dismiss it.",
+      "year": "Year", "month": "Month", "day": "Day", "hour": "UTC hour", "minute": "Minute", "second": "Second",
+      "preview": "Change time with train interventions…", "refresh": "Read clock again",
+      "apply": "Confirm", "cancel": "Cancel",
+      "confirm": "Change to {date} and intervene on trains? This may move them to their next destination and charge intervention costs. Intermediate days will not be simulated.",
+      "success": "Date and time changed: {date}. Interventions: {count}.",
+      "invalid": "Invalid date or unavailable observation. Read the clock again and check the values, especially the day of the month.",
+      "uncertain": "The change was not confirmed. It may have started: read the clock and check the log before another attempt. No command will be repeated automatically."
+    }
+  }
+}
