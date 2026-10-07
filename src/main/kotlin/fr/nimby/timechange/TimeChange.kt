@@ -27,17 +27,18 @@ class TimeChange {
                     val change = pending ?: return@with
                     reset()
                     check(change.world == worldId && change.generation == generation) { "La partie a changé" }
-                    log("Time Change request UTC=${change.date} recalculate=true world=$worldId generation=$generation")
+                    log("BB Timechange request UTC=${change.date} recalculate=true world=$worldId generation=$generation")
                     // Le joueur confirme à la fois la date et les interventions.
                     // Le SDK conserve son autre mode pour les outils qui en ont besoin.
-                    val result = changeTime(change.date.toUtcSeconds(), recalculateTrains = true)
-                    log("Time Change applied UTC=${result.clock.dateTime()} interventions=${result.interventions}")
-                    edit(event, result.clock.dateTime(), tr("success", "date" to result.clock.dateTime().toString(), "count" to result.interventions))
+                    val result = changeTime(change.date, recalculateTrains = true)
+                    val appliedDate = result.clock.dateTime()
+                    log("BB Timechange applied UTC=$appliedDate interventions=${result.interventions}")
+                    edit(event, appliedDate, tr("success", "date" to appliedDate.toString(), "count" to result.interventions))
                 }
             }
         } catch(error: Exception) {
             reset()
-            log("Time Change failed; no automatic retry: ${error.message}", LogLevel.Error)
+            log("BB Timechange failed; no automatic retry: ${error.message}", LogLevel.Error)
             showWindow(event, tr(if(event.action == "apply") "uncertain" else "invalid"), listOf(ToolButton("refresh", tr("refresh"))))
         }
     }

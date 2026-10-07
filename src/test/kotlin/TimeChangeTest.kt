@@ -10,6 +10,7 @@ class TimeChangeTest {
         ToolWindowEvent("clock", action, fields, 1, world, generation)
     private class Host {
         var writes = 0
+        var clockReads = 0
         var recalculated = false
         var seconds = 0L
         var failWrite = false
@@ -18,7 +19,7 @@ class TimeChangeTest {
             assertTrue(numbers.isEmpty())
             when(op) {
                 7 -> Unit // Diagnostic only.
-                10 -> { integers[0] = seconds; integers[1] = 1234 }
+                10 -> { clockReads++; integers[0] = seconds; integers[1] = 1234 }
                 11 -> {
                     writes++; seconds = integers[0]; recalculated = integers[1] != 0L
                     if(failWrite) return 6 // An error can follow a real change.
@@ -82,6 +83,17 @@ class TimeChangeTest {
     @Test fun toolWindowDeclarationsRejectDuplicateShortcuts() {
         assertFailsWith<IllegalArgumentException> {
             toolMod("demo", "Demo") { window("a", "A", "F8") {}; window("b", "B", "F8") {} }
+        }
+    }
+    @Test fun editingAndDuplicateApplyDoNotPollTheClockOrCaptureTheNetwork() {
+        val host = Host(); val mod = TimeChange()
+        ToolAccess.withContext(world, 1, host::call) { context ->
+            repeat(1000) { mod.handle(context, event("unhandled")) }
+            assertEquals(0, host.clockReads)
+            mod.handle(context, event("open")); assertEquals(1, host.clockReads)
+            mod.handle(context, event("preview")); mod.handle(context, event("apply"))
+            repeat(1000) { mod.handle(context, event("apply")) }
+            assertEquals(1, host.clockReads); assertEquals(1, host.writes)
         }
     }
 }

@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.0] - 2026-10-08
+
+- Première version stable sous le nom **BB Timechange**.
+
+Prérequis : **SDK 0.9.0-alpha.1** (alpha) ou plus récent, inférieur à **0.10.0**.
+
+English:
+
+- First stable release under the name **BB Timechange**.
+
+Requires **SDK 0.9.0-alpha.1** (alpha) or later, below **0.10.0**.
+
 ## [0.1.0-alpha.1] - 2026-09-28
 
 - Ajoute une fenêtre pour changer la date et l'heure de la partie.

@@ -1,12 +1,13 @@
 {
   "id": "time-change",
-  "name": "Time Change",
+  "name": "BB Timechange",
   "modId": "TimeChange",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0",
+  "developmentStatus": "stable",
   "module": "TimeChangeMod",
   "language": "kotlin-native",
-  "sdkMin": "0.8.0-alpha.3",
-  "sdkMaxExclusive": "0.9.0",
+  "sdkMin": "0.9.0-alpha.1",
+  "sdkMaxExclusive": "0.10.0",
   "gameSha256": [
     "fff49ac21720abfc824c2b4f68b862727630eb0db71cfe1f9ea8f685d0db10ae"
   ]
