@@ -3,12 +3,15 @@
 Mod outil Windows pour modifier la date et l'heure UTC depuis une fenêtre
 appartenant au jeu. Aucun signal ou autre mod n'est nécessaire.
 
-La version **0.1.0** est préparée pour le canal **stable** ; sa publication reste
+La version **0.1.1** est préparée pour le canal **stable** ; sa publication reste
 à effectuer. Le statut de développement du mod est **stable**.
-Le SDK requis est **0.9.0-alpha.1** au minimum, avec une version inférieure à
+Le SDK requis est **0.9.0-alpha.2** au minimum, avec une version inférieure à
 **0.10.0**. Ce prérequis reste une version alpha du SDK.
 
-Ouvrir une partie, puis **Ctrl + Maj + T**. Renseigner la date et l'heure,
+Ouvrir une partie, puis **F9** par défaut. Ce raccourci peut être modifié dans
+**Options → NRF Hub**, rubrique **Raccourcis**, sous **BB Timechange**. Les raccourcis
+s'affichent directement si les mods chargés ne déclarent pas d'autres préférences.
+Renseigner la date et l'heure,
 cliquer sur **Changer l'heure avec intervention sur les trains…**, puis confirmer.
 La croix ferme le panneau.
 
@@ -21,7 +24,7 @@ La saisie est UTC ; elle peut différer de l'heure affichée selon le fuseau du 
 Les conséquences sur tous les systèmes économiques et le multijoueur ne sont
 pas qualifiées ; utiliser une sauvegarde dédiée pour la première recette.
 
-Construire avec le kit SDK **0.9.0-alpha.1**, JDK 21 et :
+Construire avec le kit SDK **0.9.0-alpha.2**, JDK 21 et :
 
 ```powershell
 .\gradlew.bat windowsTest packageMod -PnrfSdkDir=C:/chemin/kit-kotlin

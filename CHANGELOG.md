@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased]
+
+## [0.1.1] - 2026-10-09
+
+- Définit **F9** comme raccourci d’ouverture par défaut. Vous pouvez le personnaliser ou le désactiver dans **Options → NRF Hub → Raccourcis**.
+- Simplifie le titre de la fenêtre et du raccourci en **Date et heure**.
+
+Prérequis : **SDK 0.9.0-alpha.2** (alpha) ou plus récent, inférieur à **0.10.0**.
+
+English:
+
+- Sets **F9** as the default opening shortcut. You can customize or disable it in **Options → NRF Hub → Shortcuts**.
+- Shortens the window and shortcut title to **Date and time**.
+
+Requires **SDK 0.9.0-alpha.2** (alpha) or later, below **0.10.0**.
+
 ## [0.1.0] - 2026-10-08
 
 - Première version stable sous le nom **BB Timechange**.

@@ -4,7 +4,7 @@
     "fr": {
       "mod.name": "BB Timechange",
       "mod.description": "Modifier la date et l'heure de la partie avec intervention sur les trains, après confirmation.",
-      "title": "BB Timechange — Date et heure",
+      "title": "Date et heure",
       "intro": "Horloge lue : {date}. Saisie en UTC ; l'affichage du jeu peut utiliser un autre fuseau. Fermez cette fenêtre avec sa croix.",
       "year": "Année", "month": "Mois", "day": "Jour", "hour": "Heure UTC", "minute": "Minute", "second": "Seconde",
       "preview": "Changer l'heure avec intervention sur les trains…", "refresh": "Relire l'horloge",
@@ -17,7 +17,7 @@
     "en": {
       "mod.name": "BB Timechange",
       "mod.description": "Change the game's date and time with train interventions, after confirmation.",
-      "title": "BB Timechange — Date and time",
+      "title": "Date and time",
       "intro": "Observed clock: {date}. Enter UTC; the game may display a different time zone. Use the window's close button to dismiss it.",
       "year": "Year", "month": "Month", "day": "Day", "hour": "UTC hour", "minute": "Minute", "second": "Second",
       "preview": "Change time with train interventions…", "refresh": "Read clock again",
