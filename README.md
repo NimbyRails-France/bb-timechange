@@ -3,8 +3,9 @@
 Mod outil Windows pour modifier la date et l'heure UTC depuis une fenêtre
 appartenant au jeu. Aucun signal ou autre mod n'est nécessaire.
 
-La version **0.1.1** est préparée pour le canal **stable** ; sa publication reste
-à effectuer. Le statut de développement du mod est **stable**.
+La version **0.1.1** est publiée sur le canal **stable**.
+[Paquet Windows et notes de version](https://github.com/NimbyRails-France/bb-timechange/releases/tag/v0.1.1).
+Le statut de développement du mod est **stable**.
 Le SDK requis est **0.9.0-alpha.2** au minimum, avec une version inférieure à
 **0.10.0**. Ce prérequis reste une version alpha du SDK.
 
